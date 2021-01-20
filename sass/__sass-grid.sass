@@ -1,0 +1,69 @@
+$grid: 1200px
+$offset: 10px
+$btn_back-color: white
+$justify: center
+$aligncont: center
+$alignitem: center
+$direction: column
+
+=container()
+    max-width:  $grid
+    
+
+=jstfcont()
+    justify-content: $justify
+
+=align-cont()
+    align-content: $aligncont
+
+=align-item()
+    align-items: $alignitem 
+
+=flexdirect()
+    flex-direction: $direction
+=flex-wrap()
+    display: flex
+    flex-wrap: wrap
+
+=box()
+    box-sizing: border-box
+    word-wrap: break-word
+
+=col($n)
+    $res: 100% / $n
+    width: #{calc(#{$res} - #{$offset*2})}
+
+=media($width)
+    @media screen and ( max-width: $width )
+        @content
+
+=header-text()
+    +flex-wrap()
+    +jstfcont()
+
+=btn()
+    transition: 0.5s
+    margin: 20px 0
+    padding: 5px 30px 5px 30px
+    font-size: 50px
+    border: none
+    border-radius: 5px
+    background-color: $btn_back-color
+
+
+=hover()
+    transition: 0.5s
+    cursor: pointer
+    background-color: lighten($btn_back-color, 10%)
+    box-shadow: 4px 4px 10px #6e6e6e
+
+=active()
+    background-color: darken($btn_back-color, 10%)
+
+=wrapper($width-wrapper)
+    max-width: $width-wrapper
+    +flex-wrap()
+    +jstfcont()
+    +align-item()
+    +flexdirect()
+    

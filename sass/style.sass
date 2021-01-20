@@ -1,0 +1,650 @@
+@import __base
+@import __sass-grid
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:ital,wght@0,300;0,400;1,500&display=swap');
+
+=text-header()
+    +flex-wrap()
+    +align-item()
+    +jstfcont()
+
+=text()
+    h2
+        font-family: 'Roboto', sans-serif
+        font-size: 30px
+        font-weight: 700
+        color: #000000
+    p
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        font-weight: 400
+        color: #838383
+        margin: 1.4rem 0
+        line-height: 1.4rem
+
+=block()
+    max-width: 360px
+    margin: 1.5rem 1rem
+    border-radius: 5px
+    box-shadow: 0 1px 3px rgba(27, 23, 26, 0.2)
+    transition: 0.5s
+    h3
+        padding: 1.5rem
+        font-family: 'Roboto', sans-serif
+        font-size: 18px
+        font-weight: 700
+        color: #000000;
+        line-height: 20px
+            
+    p
+        padding-left: 1.5rem
+        padding-right: 1.5rem
+        color: #4d4d4d
+        font-family: 'Roboto', sans-serif
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px
+
+.header-main
+    background-color:#ab0534
+
+$grid: 1100px
+.header
+    background-color: #ab0534
+    box-shadow: 0px 3px 15px #1d1d1dec
+    .container
+        +container()
+        margin: 0 auto
+    &_link
+        margin: 0 10rem 0 4rem
+        &_share
+            margin: 0 1rem
+            font-family: 'Open Sans', sans-serif
+            font-size: 16px
+            color: #f2f7ff
+            text-decoration: none
+            &:hover
+                color: lighten(#ffffff, 20%)
+            &:active
+                color: darken(#ab0534, 5%)
+                
+
+
+$justify: space-between
+.header-cont
+    +flex-wrap()
+    +align-item()
+    padding: 2rem 0
+.icon-header
+    margin: 0 1rem
+    padding: 5px
+    border-radius: 11px
+    &:hover
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)
+    
+
+.main
+   background-color: #ab0534;
+   text-align: center
+   padding-top: 4rem 
+   margin-top: 1rem
+   .container
+        +container()
+        margin: 0 auto
+   &_text
+       line-height: 4.6rem
+       h1
+            font-family: 'Open Sans', sans-serif
+            font-size: 60px
+            font-weight: 700
+            color: #f4f8ff
+       p
+            font-family: 'Open Sans', sans-serif
+            font-size: 24px
+            font-weight: 400
+            color: #f4f8ff  
+
+.main_button
+    margin: 3rem 0
+.btn-main
+    font-family: 'Open Sans', sans-serif
+    font-size: 16px
+    font-weight: 400
+    color: #f2f7ff
+    border: 1px solid #ab0534
+    border-radius: 50px
+    background-color: #ab0534
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+    padding: 20px 50px 20px 50px
+    transition: 0.5s
+    &:hover
+        transition: 0.5s
+        cursor: pointer
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+    &:active
+        background-color: darken(#ab0534, 5%)
+    &:focus
+        outline: none
+
+        
+$grid: 1170px
+.catigories
+    padding-top: 4rem
+    padding-bottom: 2rem
+    background-color: #f4f8ff;
+    .container
+        +container()
+        margin: 0 auto
+    &_text
+        text-align: center
+        h2
+            font-family: 'Open Sans', sans-serif
+            font-size: 36px
+            font-weight: 700
+    &_blocks
+        +flex-wrap()
+        +align-item()
+        text-align: center
+        margin: 3rem auto
+        
+    &_block
+        width: 181px
+        height: 171px
+        line-height: 30px
+        padding: 44px 32px
+        border-radius: 3px
+        margin: 0.4rem 0.4rem
+        background-image: url(/images/categories-img/block-img.png)
+        p
+            font-family: 'Open Sans', sans-serif
+            font-size: 18px
+            font-weight: 400
+            
+        &-red
+            color: #f2f7ff
+            background-color: #ab0534
+            background-image: none
+            
+$grid: 1180px
+.courses
+    padding-top: 6rem
+    .container
+        +container()
+        margin: 0 auto
+    
+    &_header
+        +text-header()
+
+    &_text
+        +text()
+    &_btn
+        padding: 15px 44px 15px 44px
+        color: #080808
+        font-family: 'Roboto', sans-serif
+        font-size: 15px
+        font-weight: 600
+        background-color: #ffffff
+        border: 1px solid #000000
+        border-radius: 30px
+        transition: 0.3s
+        &:hover
+            transition: 0.3s
+            cursor: pointer
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+        &:active
+            background-color: darken(#ffffff, 5%)
+        &:focus
+            outline: none
+    &_blocks
+        +flex-wrap()
+        margin: 3rem auto
+    &_block
+        +block()
+        &:hover
+            transition: 0.5s
+            box-shadow: 0 5px 21px 4px rgba(214, 222, 228, 0.68)
+
+        $justify: space-between
+        .block-price
+            +flex-wrap()
+            +jstfcont()
+            +align-item()
+            padding: 1.5rem
+        .hover-item
+            +flex-wrap()
+            +flexdirect()   
+            width: 90px
+            img
+                margin: 5px 0
+        .block_button
+            text-align: center
+            .block-btn
+                font-family: 'Open Sans', sans-serif
+                font-size: 14px
+                font-weight: 400  
+                color: #ffffff
+                padding: 15px 40px 15px 40px
+                margin-bottom: 2rem
+                border: none
+                border-radius: 50px
+                background-color: #0b409c
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+                transition: 0.5s
+            .block-btn:hover
+                transition: 0.5s
+                cursor: pointer
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+            .block-btn:focus
+                outline: none
+            .block-btn:active
+                background-color: darken(#0b409c, 5%)
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6)
+
+.discover
+    padding-top: 5rem
+    padding-bottom: 2rem
+    background-color: #f7f9fa;
+    .container
+        +container()
+        margin: 0 auto
+    &_text
+        h2
+            color: #000000
+            font-family: 'Roboto', sans-serif
+            font-size: 30px
+            font-weight: 700  
+        p
+            font-family: 'Roboto', sans-serif
+            font-size: 14px
+            font-weight: 400   
+            color: #666666 
+            margin: 1.4rem 0
+            line-height: 1.4rem   
+    &_blocks
+        +flex-wrap()
+        +jstfcont()
+        +align-item()
+        margin: 5rem auto
+    &_block1
+        text-align: center
+        width: 376px
+        color: #ffffff
+        font-family: 'Roboto', sans-serif
+        font-size: 24px
+        font-weight: 700
+        padding: 38px 0
+        background-image: url(/images/discover-img/discover-1.png)
+    &_block2
+        text-align: center
+        width: 376px
+        color: #ffffff
+        font-family: 'Roboto', sans-serif
+        font-size: 24px
+        font-weight: 700
+        padding: 38px 0
+        background-image: url(/images/discover-img/discover-2.png)
+    &_block3
+        text-align: center
+        width: 376px
+        color: #ffffff
+        font-family: 'Roboto', sans-serif
+        font-size: 24px
+        font-weight: 700
+        padding: 38px 0
+        background-image: url(/images/discover-img/discover-3.png)
+        
+.seller
+    padding-top: 6rem
+    .container
+        +container()
+        margin: 0 auto
+    
+    &_header
+        +text-header()
+
+    &_text
+        +text()
+    &_btn
+        padding: 15px 44px 15px 44px
+        color: #080808
+        font-family: 'Roboto', sans-serif
+        font-size: 15px
+        font-weight: 600
+        background-color: #ffffff
+        border: 1px solid #000000
+        border-radius: 30px
+        transition: 0.3s
+        &:hover
+            transition: 0.3s
+            cursor: pointer
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+        &:active
+            background-color: darken(#ffffff, 5%)
+        &:focus
+            outline: none
+    &_blocks
+        +flex-wrap()
+        margin: 3rem auto
+    &_block
+        +block()
+        &:hover
+            transition: 0.5s
+            box-shadow: 0 5px 21px 4px rgba(214, 222, 228, 0.68)
+        $justify: space-between
+        .block-price
+            +flex-wrap()
+            +jstfcont()
+            +align-item()
+            padding: 1.5rem
+        .hover-item
+            +flex-wrap()
+            +flexdirect()   
+            width: 90px
+            img
+                margin: 5px 0
+        .block_button
+            text-align: center
+            .block-btn
+                font-family: 'Open Sans', sans-serif
+                font-size: 14px
+                font-weight: 400  
+                color: #ffffff
+                padding: 15px 40px 15px 40px
+                margin-bottom: 2rem
+                border: none
+                border-radius: 50px
+                background-color: #0b409c
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+                transition: 0.5s
+            .block-btn:hover
+                transition: 0.5s
+                cursor: pointer
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+            .block-btn:focus
+                outline: none
+            .block-btn:active
+                background-color: darken(#0b409c, 5%)
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6)
+
+.achieve
+    padding-top: 6rem
+    .container
+        +container()
+        margin: 0 auto
+    &_text
+        +text()
+    &_blocks
+        +flex-wrap()
+        margin: 3rem auto
+    &_block
+        +block()
+        text-align: center
+        padding: 60px 25px
+        &:hover
+            transition: 0.5s
+            box-shadow: 0 5px 21px 4px rgba(214, 222, 228, 0.68)
+
+$justify: space-between
+.apprication
+    background-color: #f7f9fa;
+    padding-top: 6rem
+    margin-top: 5rem
+    .container
+        +container()
+        margin: 0 auto
+    &_text
+        +text()
+    &_blocks
+        +flex-wrap()
+        +jstfcont()
+        margin: 6rem 0
+        .block-text
+            max-width: 58rem
+            line-height: 2rem
+            background-image: url(/images/apprication-img/2-layers.png)
+            h3
+                color: #7e7e7e
+                font-family: 'Roboto', sans-serif
+                font-size: 18px
+                font-style: italic
+                padding: 2rem
+            .john
+                +flex-wrap()
+                +align-item()
+                line-height: 1.5rem
+                margin: 2rem 0
+                &-text
+                    margin: 1rem
+                    h4
+                        color: #000000
+                        font-family: 'Roboto', sans-serif
+                        font-size: 16px
+                        font-weight: 700
+                    p
+                        color: #666666
+                        font-family: 'Roboto', sans-serif
+                        font-size: 13px
+                        font-weight: 400
+    .video-img
+        border: 10px solid #e6f0f5
+        border-radius: 10px
+        transition: 0.3s
+        &:hover
+            transition: 0.3s
+            cursor: pointer
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2)
+        &:active
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+    h2
+        text-align: center
+        font-family: 'Roboto', sans-serif
+        font-size: 30px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #000000;
+
+.blog
+    padding-top: 9rem 
+    padding-bottom: 7rem
+    .container
+        +container()
+        margin: 0 auto
+    &_text
+        h2
+            font-family: 'Open Sans', sans-serif
+            font-size: 24px;
+            line-height: 23px;
+            font-weight: 700;
+            color: #333333;
+        p
+            font-family: 'Roboto', sans-serif
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 400;
+            color: #666666;
+    $justify: space-between
+    &-blocks
+        margin: 4rem 0
+        display: flex
+        +jstfcont()
+        .blog_block
+            max-width: 360px
+            background-color: #ffffff;
+            box-shadow: 0px 1px 3px 0px rgba(27,22,25,0.2)
+            transition: 0.3s
+            &:hover
+                transition: 0.3s
+                box-shadow: 0px 5px 21px 4px rgba(213,221,227,0.68);
+        $justify: space-between
+        .up-img
+            display: flex
+            +jstfcont()
+            padding: 1rem 2rem
+        h2
+            font-family: 'Roboto', sans-serif
+            font-size: 17px;
+            line-height: 23px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #010101;
+            padding: 0.5rem 2rem
+        p
+            font-family: Roboto;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            color: #4d4d4d;
+            padding: 0.5rem 2rem
+        $justify: space-between
+        .low-img
+            display: flex
+            +jstfcont()
+            +align-item()
+            padding-bottom: 2rem
+            padding-left: 2rem
+            padding-right: 2rem
+            a
+                transition: 0.3s
+                box-shadow: 0px 5px 21px 4px rgba(213,221,227,0.68);
+                &:hover
+                    box-shadow: 0px 1px 3px 0px rgba(27,22,25,0.2)
+            button
+                background-color: transparent
+                border: none
+                outline: none
+
+.instructor 
+    padding-top: 4rem
+    padding-bottom: 4rem
+    background-image: url(/images/instructor-img/fon.png)
+    background-attachment: fixed
+
+    .container
+        +container()
+        margin: 0 auto
+    &-text
+        padding-bottom: 4rem
+        text-align: center
+        h2
+            color: #333333
+            font-family: 'Roboto', sans-serif
+            font-size: 36px
+            font-weight: 700
+    $justify: space-betweens
+    &_block
+        +flex-wrap()
+        +jstfcont()   
+        +align-item()
+        margin: 0 auto
+        max-width: 50rem
+        background-color: #ffffff
+        border-radius: 50px
+        p
+            color: #000000
+            font-family: 'Roboto', sans-serif
+            font-size: 20px
+            font-weight: 500
+            padding-left: 4rem
+    &-btn
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16)
+        font-family: 'Open Sans', sans-serif
+        font-size: 16px
+        font-weight: 400
+        color: #f2f7ff
+        border: 1px solid #ab0534
+        border-radius: 50px
+        background-color: #ab0534
+        padding: 20px 80px 20px 80px
+        transition: 0.5s
+        &:hover
+            transition: 0.5s
+            cursor: pointer
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4)
+        &:active
+            background-color: darken(#ab0534, 5%)
+        &:focus
+            outline: none
+
+
+.footer
+    padding: 5rem
+    background-color: #292662
+    .container
+        +container()
+        margin: 0 auto
+        .content
+            display: flex
+            +flex-wrap()
+            .contacts
+                max-width: 19rem
+                h3
+                    font-family: 'Roboto', sans-serif
+                    font-size: 18px;
+                    line-height: 26px;
+                    font-weight: 700;
+                    color: #ffffff;
+                p
+                    font-family: 'Roboto', sans-serif
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #fefefe;
+                    line-height: 26px;
+                    margin-bottom: 2rem
+                a
+                    display: block
+                    padding-top: 0.5rem
+                    font-family: 'Roboto', sans-serif
+                    font-size: 17px;
+                    font-weight: 700;
+                    color: #fefefe;
+                    text-decoration: none
+                    transition: 0.3s
+                    &:hover
+                        transition: 0.3s
+                        color: darken(#fefefe, 15%)
+                    &:active
+                        color: lighten(#fefefe, 20%)
+            .description
+                display: flex
+                +flex-wrap()
+                margin: 0 7rem
+                &_blocks
+                    margin: 0 2rem
+                    h3
+                        font-family: 'Open Sans', sans-serif
+                        font-size: 16px;
+                        line-height: 32px;
+                        font-weight: 700;
+                        color: #f4f8ff;
+                    a
+                        display: flex
+                        +flexdirect()
+                        padding-top: 1.1rem 
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: #ffffff;
+                        text-decoration: none
+                        &:hover
+                            color: darken(#ffffff, 15%)
+                        &:active
+                            color: lighten(#ffffff, 15%)
+        .down
+            display: flex
+            padding-top: 5rem
+            $justify: space-between
+            +flex-wrap()
+            +jstfcont()
+            font-family: 'Roboto', sans-serif
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+
+           
+            
+
+            
+
+    
