@@ -872,79 +872,19 @@ html {
   color: #000000;
 }
 
-.wrapper{
-  height: 100%;
-  padding: 2rem 0.5rem;
+.downslider{
+  text-align: center;
+  padding: 3rem ;
 }
-.slider_item{
-  outline: none;
-}
-.slick-list {
-  overflow: hidden;
-}
-/* Лента слайдов */
-.slick-track{
+.slides-1{
   display: flex;
-  align-items: flex-start;
-}
-.slider-1 {
-    position: relative;
-    padding: 0px 60px;
-}
-.slider-1 .slick-arrow{
-    position: absolute;
-    top: 50%;
-    margin: -20px 0px 0px 0px;
-    z-index: 10;
-    font-size: 0;
-    width: 10px;
-    height: 30px;
-}
-.slider-1 .slick-arrow.slick-prev{
-    left: 0;
-  background: url(/images/apprication-img/slider/left.png) 0 0 / 100% no-repeat;
-  outline: none;
-  border:none;
-  cursor: pointer;
-}
-.slider-1 .slick-arrow.slick-next{
-    right: 0;
-  background: url(/images/apprication-img/slider/right.png) 0 0 / 100% no-repeat;
-  outline: none;
-  border:none;
-  cursor: pointer;
-}
-
-.slider-2 {
-	position: relative;
-	padding: 0px 0px;
-}
-
-.slider-2 .slick-dots{
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
+  flex-wrap: wrap;
+  margin: 30px;
 }
-.slider-2 .slick-dots li{
-  list-style: none;
-  margin: 0px 10px;
-}
-.slider-2 .slick-dots li button{
-  font-size: 0;
-  width: 5px;
-  height: 15px;
-  color: #999999;
-  border:2px solid #999999;
-  border-radius: 50px;
 
-}
-.slider-2 .slick-dots li.slick-active button{
-  background-color:#4d4d4d;
-  border:1px solid #4d4d4d;
-  color: #4d4d4d;
-  outline: none;
-}
+
 .blog {
   padding-top: 9rem;
   padding-bottom: 7rem;
@@ -958,7 +898,7 @@ html {
 .blog_text h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 24px;
-  line-height: 23px;
+  line-height: 40px;
   font-weight: 700;
   color: #333333;
 }
@@ -979,6 +919,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .blog-blocks .blog_block {
@@ -1058,6 +999,9 @@ html {
   background-color: transparent;
   border: none;
   outline: none;
+}
+.navigation-img{
+  text-align: center;
 }
 
 .instructor {
@@ -1268,6 +1212,15 @@ html {
 }
 /*# sourceMappingURL=style.css.map */
 
+@media (max-width: 1180px){
+  .slide1{
+    display: none;
+  }
+  .slide4{
+    display: none;
+  }
+}
+
 @media (max-width: 1100px){
   .header_img{
     margin: 0 auto;
@@ -1321,8 +1274,8 @@ html {
   .blog_text{
     text-align: center;
   }
-  .slick-list{
-    max-width: 990px;
+  .blog_block{
+    margin: 2rem auto;
   }
   .contacts{
     text-align: center;
@@ -1355,9 +1308,6 @@ html {
 }
 
 @media (max-width: 985px){
-  .slick-list{
-    max-width: 955px;
-  }
   .catigories_blocks{
     margin: 0 0;
   }
@@ -1368,9 +1318,6 @@ html {
   }
 }
 @media (max-width: 955px){
-  .slick-list{
-    max-width: 800px;
-  }
   .catigories_blocks{
     padding: 0 20%;
   }
@@ -1418,9 +1365,6 @@ html {
   .catigories_blocks{
     padding: 0 15%;
   }
-  .slick-list{
-    max-width: 600px;
-  }
   .courses_blocks{
     margin: 0 20%;
   }
@@ -1429,6 +1373,7 @@ html {
   }
   
 }
+
 @media (max-width: 743px){
   .apprication_blocks{
     width: 270px;
@@ -1437,6 +1382,13 @@ html {
     margin: 15%;
   }
 }
+
+@media (max-width: 700px){
+  .slide3{
+    display: none;
+  }
+}
+
 @media (max-width: 699px){
   .apprication_blocks .block-text{
    padding-right: 40px;
@@ -1445,9 +1397,6 @@ html {
 @media (max-width: 645px){
   .catigories_blocks{
     padding: 0 25%;
-  }
-  .slick-list{
-    max-width: 600px;
   }
   .courses_header{
     text-align: center;
@@ -1465,12 +1414,10 @@ html {
     max-width: 550px;
   }
 }
+
 @media (max-width: 600px){
   .catigories_blocks{
     padding: 0 25%;
-  }
-  .slick-list{
-    max-width: 400px;
   }
   .contacts{
     text-align: center;
@@ -1511,9 +1458,6 @@ html {
   }
 }
 @media (max-width: 450px){
-  .slick-list{
-    max-width: 320px;
-  }
   .contacts{
     margin-left: 15%;
   }
@@ -1533,6 +1477,12 @@ html {
   .blocks-btn{
     margin: 0 auto;
   }
+  .left{
+    margin-right: 3%;
+  }
+  .right{
+    margin-left: 3%;
+  }
 }
 @media (max-width: 411px){
   .header_img{
@@ -1546,9 +1496,6 @@ html {
   }
 }
 @media (max-width: 400px){
-  .slick-list{
-    max-width: 310px;
-  }
   .header-cont{
     margin: 0 1%;
   }
@@ -1620,6 +1567,12 @@ html {
   .contacts{
     margin: 0;
   }
+  .left{
+    margin-right: 5%;
+  }
+  .right{
+    margin-left: 5%;
+  }
 }
 @media (max-width: 375px){
   .header_img{
@@ -1642,6 +1595,12 @@ html {
   }
   .blog_text p{
     font-size: 14px;
+  }
+  .left{
+    display: none;
+  }
+  .right{
+    display: none;
   }
 }
 @media (max-width: 360px){
